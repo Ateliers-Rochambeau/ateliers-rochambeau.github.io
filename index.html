@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ateliers Rochambeau</title>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            background-color: #333;
+            color: white;
+        }
+        .header {
+            position: absolute;
+            top: 0;
+            right: 0;
+            margin: 20px;
+        }
+        .logo img {
+            height: 33vh;
+            width: auto;
+        }
+        .access-link {
+            cursor: pointer;
+            text-decoration: none;
+            color: #AAA;
+            font-size: 16px;
+        }
+        .access-link:hover {
+            color: #FFF;
+        }
+        .title {
+            margin-top: 20px;
+            font-size: 2em;
+        }
+    </style>
+</head>
+<body>
+
+<div class="header">
+    <span class="access-link" onclick="requestPassword()">Client Access</span>
+</div>
+
+<div class="logo">
+    <img src="logo.svg" alt="Ateliers Rochambeau Logo">
+</div>
+<div class="title">Ateliers Rochambeau</div>
+
+<script>
+    function requestPassword() {
+        const password = prompt("Please enter the password:", "");
+        if (password === null || password === "") {
+            alert("No password entered.");
+        } else {
+            alert("Wrong password");
+        }
+    }
+</script>
+
+</body>
+</html>
